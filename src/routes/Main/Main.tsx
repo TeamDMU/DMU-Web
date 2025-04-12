@@ -1,11 +1,16 @@
 import * as S from './Main.style';
-import { useEffect, useState } from 'react';
-import noticeIcon from '../../assets/icon/notice.svg';
-import appleIcon from '../../assets/icon/notice.svg';
-import playIcon from '../../assets/icon/notice.svg';
+import { useEffect, useRef, useState } from 'react';
+import { theme } from '@/styles/theme';
+import mainLogo from '../../assets/img/mainLogo.png';
+import noticeIcon from '../../assets/img/notice.png';
+import appleIcon from '../../assets/icon/appleLogo.svg';
+import googlePlayIcon from '../../assets/icon/googlePlayLogo.svg';
 
 function Main() {
 	const [isScrolled, setIsScrolled] = useState(false);
+
+	const textRef = useRef<HTMLParagraphElement>(null);
+	const [textWidth, setTextWidth] = useState<number>(0);
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -23,33 +28,43 @@ function Main() {
 			window.removeEventListener('scroll', handleScroll);
 		};
 	}, []);
+
+	useEffect(() => {
+		if (textRef.current) {
+			const width = textRef.current.offsetWidth;
+			setTextWidth(width);
+		}
+	}, []);
+
 	return (
 		<S.NotificationContainer>
 			<S.NotificationBox>
 				<S.NotificationCard>
-					<S.Icon src={noticeIcon} alt="icon" />
+					<S.NotificationIcon src={noticeIcon} alt="icon" />
 					<S.NotificationText>[공모전] 키워드 알림이 도착했어요!</S.NotificationText>
 				</S.NotificationCard>
 				<S.NotificationCard reverse>
-					<S.Icon src={noticeIcon} alt="icon"/>
+					<S.NotificationIcon src={noticeIcon} alt="icon" />
 					<S.NotificationText>[장학] 키워드 알림이 도착했어요!</S.NotificationText>
 				</S.NotificationCard>
 				<S.NotificationCard>
-					<S.Icon src={noticeIcon} alt="icon" />
+					<S.NotificationIcon src={noticeIcon} alt="icon" />
 					<S.NotificationText>&nbsp;</S.NotificationText>
 				</S.NotificationCard>
 			</S.NotificationBox>
 
-			<S.MainText>우리 학교 공지를 가장 빠르게.</S.MainText>
-			<S.Logo>DMFORU</S.Logo>
+			<S.MainText ref={textRef}>
+				우리 학교 공지를 가장 빠르게<span style={{ color: theme.COLOR.Yellow }}>.</span>
+			</S.MainText>
+			<S.MainLogo src={mainLogo} width={textWidth} />
 
 			<S.ButtonContainer>
 				<S.DownloadButton>
-					<img src={appleIcon} alt="App Store" width={18} style={{ marginRight: 6 }} />
+					<S.DownloadLogo src={appleIcon} alt="App Store" />
 					App Store
 				</S.DownloadButton>
 				<S.DownloadButton>
-					<img src={playIcon} alt="Google Play" width={18} style={{ marginRight: 6 }} />
+					<S.DownloadLogo src={googlePlayIcon} alt="Google Play" />
 					Google Play
 				</S.DownloadButton>
 			</S.ButtonContainer>

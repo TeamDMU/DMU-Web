@@ -17,7 +17,8 @@ export const NotificationBox = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 3rem;
-	margin-bottom: 4rem;
+	margin-top: 3rem;
+	margin-bottom: 5rem;
 `;
 
 export const NotificationCard = styled.div<{ reverse?: boolean }>`
@@ -31,7 +32,7 @@ export const NotificationCard = styled.div<{ reverse?: boolean }>`
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
-  	margin-left: ${props => (props.reverse ? 'auto' : '0')};
+	margin-left: ${props => (props.reverse ? 'auto' : '0')};
 `;
 
 export const NotificationText = styled.text`
@@ -40,42 +41,52 @@ export const NotificationText = styled.text`
 	color: ${theme.COLOR.White};
 `;
 
-export const Icon = styled.img`
+export const NotificationIcon = styled.img`
 	width: 2rem;
 	height: 2rem;
 `;
 
-export const MainText = styled.h2`
-	font-size: 18px;
-	margin-bottom: 10px;
-	font-weight: 400;
+export const MainText = styled.p`
+	font-size: 2rem;
+	font-weight: 600;
+	margin-bottom: 2rem;
 `;
 
-export const Logo = styled.h1`
-	font-size: 48px;
-	font-weight: 800;
-	margin-bottom: 30px;
-	letter-spacing: 2px;
+export const MainLogo = styled.img<{ width?: number }>`
+	width: ${({ width }) => (width ? `${width}px` : 'auto')};
+	margin-bottom: 3rem;
 `;
 
 export const ButtonContainer = styled.div`
 	display: flex;
-	gap: 12px;
+	gap: 1.5rem;
 `;
 
 export const DownloadButton = styled.button`
 	background-color: white;
-	color: #3a60b2;
-	padding: 10px 20px;
-	border-radius: 12px;
+	color: ${theme.COLOR.Blue400};
+	padding: 0.8rem 1rem;
+	border-radius: 1rem;
 	font-weight: 600;
 	display: flex;
 	align-items: center;
-	font-size: 14px;
-	border: none;
+	font-size: 1.3rem;
+	font-weight: 600;
+	border: 2px solid transparent;
 	cursor: pointer;
+	gap: 0.5rem;
 
 	&:hover {
-		background-color: #f1f1f1;
+		color: white;
+		background-color: ${theme.COLOR.Blue400};
+		border: 2px solid white;
+	}
+`;
+
+export const DownloadLogo = styled.img`
+	width: 3rem;
+	height: 3rem;
+	${DownloadButton}:hover & {
+		filter: brightness(0) invert(1);
 	}
 `;
