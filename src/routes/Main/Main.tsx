@@ -45,16 +45,16 @@ function Main() {
 			<S.Decoration src={decoSecond} order={2} />
 			<S.Decoration src={decoThird} order={3} />
 
-			<S.NotificationBox>
-				<S.NotificationCard>
+			<S.NotificationBox width={textWidth}>
+				<S.NotificationCard order={'left'}>
 					<S.NotificationIcon src={noticeIcon} alt="icon" />
 					<S.NotificationText>[공모전] 키워드 알림이 도착했어요!</S.NotificationText>
 				</S.NotificationCard>
-				<S.NotificationCard reverse>
+				<S.NotificationCard order={'right'}>
 					<S.NotificationIcon src={noticeIcon} alt="icon" />
 					<S.NotificationText>[장학] 키워드 알림이 도착했어요!</S.NotificationText>
 				</S.NotificationCard>
-				<S.NotificationCard>
+				<S.NotificationCard order={'center'}>
 					<S.NotificationIcon src={noticeIcon} alt="icon" />
 					<S.NotificationText>&nbsp;</S.NotificationText>
 				</S.NotificationCard>

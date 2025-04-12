@@ -51,8 +51,9 @@ export const Decoration = styled.img<{ order: 1 | 2 | 3 }>`
 	}}
 `;
 
-export const NotificationBox = styled.div`
-	width: 40%;
+export const NotificationBox = styled.div<{ width?: number }>`
+	width: ${({ width }) => (width ? `${width+150}px` : 'auto')};
+	left: 50%;
 	display: flex;
 	flex-direction: column;
 	gap: 3rem;
@@ -60,9 +61,9 @@ export const NotificationBox = styled.div`
 	margin-bottom: 5rem;
 `;
 
-export const NotificationCard = styled.div<{ reverse?: boolean }>`
+export const NotificationCard = styled.div<{ order: 'left' | 'center' | 'right' }>`
 	width: fit-content;
-	min-width: 400px;
+	min-width: 420px;
 	background-color: rgba(255, 255, 255, 0.2);
 	backdrop-filter: blur(4px);
 	border-radius: 1rem;
@@ -71,7 +72,18 @@ export const NotificationCard = styled.div<{ reverse?: boolean }>`
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
-	margin-left: ${props => (props.reverse ? 'auto' : '0')};
+
+	margin-left: ${({ order }) => {
+		if (order === 'left') {
+			return '0';
+		} else if (order === 'center') {
+			return 'auto';
+		} else if (order === 'right') {
+			return 'auto';
+		}
+	}};
+
+	margin-right: ${({ order }) => (order === 'right' ? '0' : 'auto')};
 `;
 
 export const NotificationText = styled.text`
