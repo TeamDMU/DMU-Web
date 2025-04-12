@@ -9,16 +9,20 @@ export const NotificationContainer = styled.section`
 	align-items: center;
 	justify-content: center;
 	color: white;
+	padding: 3rem;
 `;
 
 export const NotificationBox = styled.div`
+	width: 40%;
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
+	gap: 3rem;
 	margin-bottom: 4rem;
 `;
 
-export const NotificationCard = styled.div<{ reverse: boolean }>`
+export const NotificationCard = styled.div<{ reverse?: boolean }>`
+	width: fit-content;
+	min-width: 400px;
 	background-color: rgba(255, 255, 255, 0.2);
 	backdrop-filter: blur(4px);
 	border-radius: 1rem;
@@ -27,6 +31,7 @@ export const NotificationCard = styled.div<{ reverse: boolean }>`
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
+  	margin-left: ${props => (props.reverse ? 'auto' : '0')};
 `;
 
 export const NotificationText = styled.text`

@@ -30,8 +30,8 @@ function Main() {
 					<S.Icon src={noticeIcon} alt="icon" />
 					<S.NotificationText>[공모전] 키워드 알림이 도착했어요!</S.NotificationText>
 				</S.NotificationCard>
-				<S.NotificationCard>
-					<S.Icon src={noticeIcon} alt="icon" />
+				<S.NotificationCard reverse>
+					<S.Icon src={noticeIcon} alt="icon"/>
 					<S.NotificationText>[장학] 키워드 알림이 도착했어요!</S.NotificationText>
 				</S.NotificationCard>
 				<S.NotificationCard>
