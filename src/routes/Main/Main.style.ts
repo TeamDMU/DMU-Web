@@ -12,6 +12,45 @@ export const NotificationContainer = styled.section`
 	padding: 3rem;
 `;
 
+export const Decoration = styled.img<{ order: 1 | 2 | 3 }>`
+	position: absolute;
+	opacity: 0.2;
+	z-index: 1;
+
+	${({ order }) => {
+		const widthMap = {
+			1: '8rem',
+			2: '9rem',
+			3: '15rem',
+		};
+
+		const topMap = {
+			1: '-2%',
+			2: '26%',
+			3: '54%',
+		};
+
+		const leftMap = {
+			1: '25%',
+			2: '66%',
+			3: '24%',
+		};
+
+		const filterMap = {
+			1: 'blur(5px)',
+			2: 'blur(8px)',
+			3: 'blur(8px)',
+		};
+
+		return `
+      width: ${widthMap[order]};
+      top: ${topMap[order]};
+      left: ${leftMap[order]};
+	  filter: ${filterMap[order]};
+    `;
+	}}
+`;
+
 export const NotificationBox = styled.div`
 	width: 40%;
 	display: flex;

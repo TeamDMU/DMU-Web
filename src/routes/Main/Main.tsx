@@ -5,6 +5,9 @@ import mainLogo from '../../assets/img/mainLogo.png';
 import noticeIcon from '../../assets/img/notice.png';
 import appleIcon from '../../assets/icon/appleLogo.svg';
 import googlePlayIcon from '../../assets/icon/googlePlayLogo.svg';
+import decoFirst from '../../assets/img/decoFirst.png'
+import decoSecond from '../../assets/img/decoSecond.png'
+import decoThird from '../../assets/img/decoThird.png'
 
 function Main() {
 	const [isScrolled, setIsScrolled] = useState(false);
@@ -38,6 +41,10 @@ function Main() {
 
 	return (
 		<S.NotificationContainer>
+			<S.Decoration src={decoFirst} order={1} />
+			<S.Decoration src={decoSecond} order={2} />
+			<S.Decoration src={decoThird} order={3} />
+
 			<S.NotificationBox>
 				<S.NotificationCard>
 					<S.NotificationIcon src={noticeIcon} alt="icon" />
