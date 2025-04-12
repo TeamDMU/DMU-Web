@@ -1,6 +1,8 @@
 import * as S from './Main.style';
 import { useEffect, useState } from 'react';
-import img from '../../assets/DMforU.svg';
+import noticeIcon from '../../assets/icon/notice.svg';
+import appleIcon from  '../../assets/icon/notice.svg';
+import playIcon from '../../assets/icon/notice.svg';
 
 function Main() {
 	const [isScrolled, setIsScrolled] = useState(false);
@@ -21,70 +23,37 @@ function Main() {
 			window.removeEventListener('scroll', handleScroll);
 		};
 	}, []);
-
 	return (
-		<S.OuterContainer className="outer-container">
-			<S.HeaderWrapper isScrolled={isScrolled}>
-				<S.HeaderContainer>
-					<S.HeaderLogoContainer>
-						<S.HeaderLogo src={img} alt="로고" />
-						<S.HeaderTitle>CS24</S.HeaderTitle>
-					</S.HeaderLogoContainer>
-				</S.HeaderContainer>
-			</S.HeaderWrapper>
-			<S.InnerContainer>
-				<S.ScrollableContainer>
-					{/* 인트로 섹션 */}
-					<S.Section isIntro>
-						<S.SectionTitle isIntro>매일 새로운 CS 도전, CS24와 함께</S.SectionTitle>
-						<S.SectionDescription isIntro>
-							매일 카카오톡으로 제공되는 AI 생성 CS 문제를 풀며 실시간으로 지식을 습득하고 성장하세요.
-						</S.SectionDescription>
-					</S.Section>
-
-					{/* 목업 설명 섹션 */}
-					<S.Section>
-						<S.FlexContainer>
-							<S.MockupImage src={img} alt="알림 목업 이미지" />
-							<S.ContentBox>
-								<S.SubTitle>매일 도착하는</S.SubTitle>
-								<S.Title>카카오톡으로 동기부여</S.Title>
-								<S.Description>
-									카카오톡의 알림으로
-									<br />
-									확실한 문제풀이 동기를 제공합니다.
-								</S.Description>
-							</S.ContentBox>
-						</S.FlexContainer>
-
-						<S.FlexContainer reverse>
-							<S.MockupImage src={img} alt="채팅 목업 이미지" />
-							<S.ContentBox>
-								<S.SubTitle>채팅으로</S.SubTitle>
-								<S.Title>쉽고 빠른 문제 풀이</S.Title>
-								<S.Description>
-									채팅 방식으로 CS 문제를 풀어
-									<br />
-									직관적이고 편리한 UI를 제공합니다.
-								</S.Description>
-							</S.ContentBox>
-						</S.FlexContainer>
-						<S.FlexContainer>
-							<S.MockupImage src={img} alt="답변 목업 이미지" />
-							<S.ContentBox>
-								<S.SubTitle>답안과 함께</S.SubTitle>
-								<S.Title>나만의 피드백 제공</S.Title>
-								<S.Description>
-									답안과 함께 AI 피드백을 제공하여
-									<br />
-									사용자가 부족한 점을 확인할 수 있습니다.
-								</S.Description>
-							</S.ContentBox>
-						</S.FlexContainer>
-					</S.Section>
-				</S.ScrollableContainer>
-			</S.InnerContainer>
-		</S.OuterContainer>
+		<S.NotificationContainer>
+		  <S.NotificationBox>
+			<S.NotificationCard>
+			  <S.Icon src={noticeIcon} alt="icon" />
+			  <S.NotificationText>[공모전] 키워드 알림이 도착했어요!</S.NotificationText>
+			</S.NotificationCard>
+			<S.NotificationCard>
+			  <S.Icon src={noticeIcon} alt="icon" />
+			  <S.NotificationText>[장학] 키워드 알림이 도착했어요!</S.NotificationText>
+			</S.NotificationCard>
+			<S.NotificationCard>
+			  <S.Icon src={noticeIcon} alt="icon" />
+			  <S.NotificationText>&nbsp;</S.NotificationText>
+			</S.NotificationCard>
+		  </S.NotificationBox>
+	
+		  <S.MainText>우리 학교 공지를 가장 빠르게.</S.MainText>
+		  <S.Logo>DMFORU</S.Logo>
+	
+		  <S.ButtonContainer>
+			<S.DownloadButton>
+			  <img src={appleIcon} alt="App Store" width={18} style={{ marginRight: 6 }} />
+			  App Store
+			</S.DownloadButton>
+			<S.DownloadButton>
+			  <img src={playIcon} alt="Google Play" width={18} style={{ marginRight: 6 }} />
+			  Google Play
+			</S.DownloadButton>
+		  </S.ButtonContainer>
+		</S.NotificationContainer>
 	);
 }
 
