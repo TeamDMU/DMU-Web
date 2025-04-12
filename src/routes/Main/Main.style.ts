@@ -198,4 +198,68 @@ export const DownloadLogo = styled.img`
 `;
 
 export const Section = styled.div `
-`
+	background: white;
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	padding: 4rem;
+	padding-bottom: 10%;
+	text-align: center;
+`;
+
+export const SectionCategory = styled.p`
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: ${theme.COLOR.Blue400};
+	margin-bottom: 1rem;
+
+	@media (max-width: 768px) {
+		font-size: 1.6rem;
+		margin-bottom: 1.5rem;
+	}
+
+	@media (max-width: 480px) {
+		font-size: 1.1rem;
+		margin-bottom: 0.8rem;
+	}
+`;
+
+export const SectionTitle = styled.p`
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: ${theme.COLOR.Text};
+  	line-height: 1.2;
+	margin-bottom: 1.7rem;
+
+	@media (max-width: 768px) {
+		font-size: 1.8rem;
+		margin-bottom: 2.4rem;
+	}
+
+	@media (max-width: 480px) {
+		font-size: 1.3rem;
+		margin-bottom: 1.5rem;
+	}
+`;
+
+export const SectionSubtitle = styled.p`
+	font-size: 1.2rem;
+	font-weight: 400;
+	color: ${theme.COLOR.Gray400};
+  	line-height: 1.2;
+
+	@media (max-width: 768px) {
+		font-size: 1.7rem;
+	}
+
+	@media (max-width: 480px) {
+		font-size: 1.2rem;
+	}
+`;
+
+export const SectionImg = styled.img`
+`;

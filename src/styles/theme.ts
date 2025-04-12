@@ -20,8 +20,7 @@ const COLOR = {
 	YellowLogo: '#F7CE45',
 	BlueLogo: '#5B76E4',
 	LightBlueLogo: '#95A7EE',
-	InnerBackground: '#FFFFFF',
-	SelectAnswer: '#FDCC12',
+	Text: '#181818',
 } as const;
 
 const FONT = {
