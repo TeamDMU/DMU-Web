@@ -10,6 +10,9 @@ import decoSecond from '../../assets/img/decoSecond.png';
 import decoThird from '../../assets/img/decoThird.png';
 
 function Main() {
+	const appStoreLink = 'https://apps.apple.com/kr/app/dmforu/id6480396503';
+	const googlePlayLink = 'https://play.google.com/store/apps/details?id=com.dongyang.android.youdongknowme&hl=ko';
+
 	const [isScrolled, setIsScrolled] = useState(false);
 
 	const textRef = useRef<HTMLParagraphElement>(null);
@@ -66,11 +69,12 @@ function Main() {
 			<S.MainLogo src={mainLogo} width={textWidth} />
 
 			<S.ButtonContainer>
-				<S.DownloadButton>
+				<S.DownloadButton href={appStoreLink} target="_blank">
 					<S.DownloadLogo src={appleIcon} alt="App Store" />
 					App Store
 				</S.DownloadButton>
-				<S.DownloadButton>
+
+				<S.DownloadButton href={googlePlayLink} target="_blank">
 					<S.DownloadLogo src={googlePlayIcon} alt="Google Play" />
 					Google Play
 				</S.DownloadButton>

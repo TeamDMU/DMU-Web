@@ -153,7 +153,7 @@ export const ButtonContainer = styled.div`
 	gap: 1.5rem;
 `;
 
-export const DownloadButton = styled.button`
+export const DownloadButton = styled.a`
 	background-color: white;
 	color: ${theme.COLOR.Blue400};
 	padding: 0.8rem 1rem;
