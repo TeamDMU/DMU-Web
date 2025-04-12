@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { theme } from '@/styles/theme';
 
-export const NotificationContainer = styled.section`
+export const MainContainer = styled.section`
 	background: linear-gradient(to bottom, #95a7ee 0%, #4967e2 31%, #354dae 100%);
 	height: fit-content;
 	display: flex;
@@ -21,7 +21,7 @@ export const NotificationContainer = styled.section`
 	}
 `;
 
-export const Decoration = styled.img<{ order: 1 | 2 | 3 }>`
+export const MainDecoration = styled.img<{ order: 1 | 2 | 3 }>`
 	position: absolute;
 	opacity: 0.2;
 	z-index: 1;
@@ -60,7 +60,7 @@ export const Decoration = styled.img<{ order: 1 | 2 | 3 }>`
 	}}
 `;
 
-export const NotificationBox = styled.div<{ width?: number }>`
+export const BubbleContainer = styled.div<{ width?: number }>`
 	width: ${({ width }) => (width ? `${width + 150}px` : 'auto')};
 	left: 50%;
 	display: flex;
@@ -78,7 +78,7 @@ export const NotificationBox = styled.div<{ width?: number }>`
 	}
 `;
 
-export const NotificationCard = styled.div<{ order: 'left' | 'center' | 'right' }>`
+export const Bubble = styled.div<{ order: 'left' | 'center' | 'right' }>`
 	width: fit-content;
 	min-width: 420px;
 	background-color: rgba(255, 255, 255, 0.2);
@@ -110,7 +110,7 @@ export const NotificationCard = styled.div<{ order: 'left' | 'center' | 'right' 
 	}
 `;
 
-export const NotificationText = styled.text`
+export const BubbleText = styled.text`
 	font-size: 1.5rem;
 	font-weight: 600;
 	color: ${theme.COLOR.White};
@@ -124,7 +124,7 @@ export const NotificationText = styled.text`
 	}
 `;
 
-export const NotificationIcon = styled.img`
+export const BubbleIcon = styled.img`
 	width: 2rem;
 	height: 2rem;
 `;
@@ -148,7 +148,7 @@ export const MainLogo = styled.img<{ width?: number }>`
 	margin-bottom: 3rem;
 `;
 
-export const ButtonContainer = styled.div`
+export const DownloadContainer = styled.div`
 	display: flex;
 	gap: 1.5rem;
 `;
