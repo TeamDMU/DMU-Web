@@ -12,27 +12,29 @@ import decoThird from '../../assets/img/decoThird.png';
 
 function Main() {
 
-	const [isScrolled, setIsScrolled] = useState(false);
-
 	const textRef = useRef<HTMLParagraphElement>(null);
 	const [textWidth, setTextWidth] = useState<number>(0);
 
-	useEffect(() => {
-		const handleScroll = () => {
-			const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-			setIsScrolled(scrollPosition > 10);
-		};
 
-		// 초기 스크롤 상태 확인
-		handleScroll();
+	// 헤더용 사용 예정
+	// const [isScrolled, setIsScrolled] = useState(false);
 
-		// 이벤트 리스너 등록
-		window.addEventListener('scroll', handleScroll, { passive: true });
+	// useEffect(() => {
+	// 	const handleScroll = () => {
+	// 		const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+	// 		setIsScrolled(scrollPosition > 10);
+	// 	};
 
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	}, []);
+	// 	// 초기 스크롤 상태 확인
+	// 	handleScroll();
+
+	// 	// 이벤트 리스너 등록
+	// 	window.addEventListener('scroll', handleScroll, { passive: true });
+
+	// 	return () => {
+	// 		window.removeEventListener('scroll', handleScroll);
+	// 	};
+	// }, []);
 
 	useEffect(() => {
 		if (textRef.current) {
