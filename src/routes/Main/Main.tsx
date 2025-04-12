@@ -5,9 +5,9 @@ import mainLogo from '../../assets/img/mainLogo.png';
 import noticeIcon from '../../assets/img/notice.png';
 import appleIcon from '../../assets/icon/appleLogo.svg';
 import googlePlayIcon from '../../assets/icon/googlePlayLogo.svg';
-import decoFirst from '../../assets/img/decoFirst.png'
-import decoSecond from '../../assets/img/decoSecond.png'
-import decoThird from '../../assets/img/decoThird.png'
+import decoFirst from '../../assets/img/decoFirst.png';
+import decoSecond from '../../assets/img/decoSecond.png';
+import decoThird from '../../assets/img/decoThird.png';
 
 function Main() {
 	const [isScrolled, setIsScrolled] = useState(false);

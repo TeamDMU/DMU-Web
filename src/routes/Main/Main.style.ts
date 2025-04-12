@@ -3,13 +3,22 @@ import { theme } from '@/styles/theme';
 
 export const NotificationContainer = styled.section`
 	background: linear-gradient(to bottom, #95a7ee 0%, #4967e2 31%, #354dae 100%);
-	min-height: 100vh;
+	height: fit-content;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 	color: white;
 	padding: 3rem;
+	padding-bottom: 10%;
+
+	@media (max-width: 768px) {
+		padding-bottom: 15%;
+	}
+
+	@media (max-width: 480px) {
+		padding-bottom: 30%;
+	}
 `;
 
 export const Decoration = styled.img<{ order: 1 | 2 | 3 }>`
@@ -52,13 +61,21 @@ export const Decoration = styled.img<{ order: 1 | 2 | 3 }>`
 `;
 
 export const NotificationBox = styled.div<{ width?: number }>`
-	width: ${({ width }) => (width ? `${width+150}px` : 'auto')};
+	width: ${({ width }) => (width ? `${width + 150}px` : 'auto')};
 	left: 50%;
 	display: flex;
 	flex-direction: column;
 	gap: 3rem;
 	margin-top: 3rem;
 	margin-bottom: 5rem;
+
+	@media (max-width: 768px) {
+		width: ${({ width }) => (width ? `${width + 140}px` : 'auto')};
+	}
+
+	@media (max-width: 480px) {
+		width: ${({ width }) => (width ? `${width + 130}px` : 'auto')};
+	}
 `;
 
 export const NotificationCard = styled.div<{ order: 'left' | 'center' | 'right' }>`
@@ -68,7 +85,6 @@ export const NotificationCard = styled.div<{ order: 'left' | 'center' | 'right' 
 	backdrop-filter: blur(4px);
 	border-radius: 1rem;
 	padding: 1rem;
-	font-size: 1rem;
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
@@ -84,12 +100,28 @@ export const NotificationCard = styled.div<{ order: 'left' | 'center' | 'right' 
 	}};
 
 	margin-right: ${({ order }) => (order === 'right' ? '0' : 'auto')};
+
+	@media (max-width: 768px) {
+		min-width: 370px;
+	}
+
+	@media (max-width: 480px) {
+		min-width: 300px;
+	}
 `;
 
 export const NotificationText = styled.text`
 	font-size: 1.5rem;
 	font-weight: 600;
 	color: ${theme.COLOR.White};
+
+	@media (max-width: 768px) {
+		font-size: 1.3rem;
+	}
+
+	@media (max-width: 480px) {
+		font-size: 1.2rem;
+	}
 `;
 
 export const NotificationIcon = styled.img`
@@ -101,6 +133,14 @@ export const MainText = styled.p`
 	font-size: 2rem;
 	font-weight: 600;
 	margin-bottom: 2rem;
+
+	@media (max-width: 768px) {
+		font-size: 1.9rem;
+	}
+
+	@media (max-width: 480px) {
+		font-size: 1.2rem;
+	}
 `;
 
 export const MainLogo = styled.img<{ width?: number }>`
@@ -131,6 +171,14 @@ export const DownloadButton = styled.button`
 		color: white;
 		background-color: ${theme.COLOR.Blue400};
 		border: 2px solid white;
+	}
+
+	@media (max-width: 768px) {
+		font-size: 1.2rem;
+	}
+
+	@media (max-width: 480px) {
+		font-size: 1rem;
 	}
 `;
 
