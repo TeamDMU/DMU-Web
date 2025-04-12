@@ -1,7 +1,14 @@
 import styled from 'styled-components';
 import { theme } from '@/styles/theme';
 
-export const NotificationContainer = styled.section`
+export const OuterContainer = styled.div`
+	width: 100%;
+	min-height: 100vh;
+	overflow-x: hidden;
+	overscroll-behavior: none;
+`;
+
+export const MainContainer = styled.section`
 	background: linear-gradient(to bottom, #95a7ee 0%, #4967e2 31%, #354dae 100%);
 	height: fit-content;
 	display: flex;
@@ -21,7 +28,7 @@ export const NotificationContainer = styled.section`
 	}
 `;
 
-export const Decoration = styled.img<{ order: 1 | 2 | 3 }>`
+export const MainDecoration = styled.img<{ order: 1 | 2 | 3 }>`
 	position: absolute;
 	opacity: 0.2;
 	z-index: 1;
@@ -60,7 +67,7 @@ export const Decoration = styled.img<{ order: 1 | 2 | 3 }>`
 	}}
 `;
 
-export const NotificationBox = styled.div<{ width?: number }>`
+export const BubbleContainer = styled.div<{ width?: number }>`
 	width: ${({ width }) => (width ? `${width + 150}px` : 'auto')};
 	left: 50%;
 	display: flex;
@@ -78,7 +85,7 @@ export const NotificationBox = styled.div<{ width?: number }>`
 	}
 `;
 
-export const NotificationCard = styled.div<{ order: 'left' | 'center' | 'right' }>`
+export const Bubble = styled.div<{ order: 'left' | 'center' | 'right' }>`
 	width: fit-content;
 	min-width: 420px;
 	background-color: rgba(255, 255, 255, 0.2);
@@ -110,7 +117,7 @@ export const NotificationCard = styled.div<{ order: 'left' | 'center' | 'right' 
 	}
 `;
 
-export const NotificationText = styled.text`
+export const BubbleText = styled.text`
 	font-size: 1.5rem;
 	font-weight: 600;
 	color: ${theme.COLOR.White};
@@ -124,7 +131,7 @@ export const NotificationText = styled.text`
 	}
 `;
 
-export const NotificationIcon = styled.img`
+export const BubbleIcon = styled.img`
 	width: 2rem;
 	height: 2rem;
 `;
@@ -148,7 +155,7 @@ export const MainLogo = styled.img<{ width?: number }>`
 	margin-bottom: 3rem;
 `;
 
-export const ButtonContainer = styled.div`
+export const DownloadContainer = styled.div`
 	display: flex;
 	gap: 1.5rem;
 `;
@@ -188,4 +195,75 @@ export const DownloadLogo = styled.img`
 	${DownloadButton}:hover & {
 		filter: brightness(0) invert(1);
 	}
+`;
+
+export const Section = styled.div `
+	background: white;
+	width: 100vw;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	padding: 4rem 0rem;
+	text-align: center;
+`;
+
+export const SectionCategory = styled.p`
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: ${theme.COLOR.Blue400};
+	margin-bottom: 1rem;
+
+	@media (max-width: 768px) {
+		font-size: 1.6rem;
+		margin-bottom: 1.5rem;
+	}
+
+	@media (max-width: 480px) {
+		font-size: 1.1rem;
+		margin-bottom: 0.8rem;
+	}
+`;
+
+export const SectionTitle = styled.p`
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: ${theme.COLOR.Text};
+  	line-height: 1.2;
+	margin-bottom: 1.7rem;
+
+	@media (max-width: 768px) {
+		font-size: 1.8rem;
+		margin-bottom: 2.4rem;
+	}
+
+	@media (max-width: 480px) {
+		font-size: 1.3rem;
+		margin-bottom: 1.5rem;
+	}
+`;
+
+export const SectionSubtitle = styled.p`
+	font-size: 1.2rem;
+	font-weight: 400;
+	color: ${theme.COLOR.Gray400};
+  	line-height: 1.2;
+	margin-bottom: 3rem;
+
+	@media (max-width: 768px) {
+		font-size: 1.7rem;
+	}
+
+	@media (max-width: 480px) {
+		font-size: 1.2rem;
+	}
+`;
+
+export const SectionImg = styled.img`
+	object-fit: cover;
+	object-position: left;
+	margin-left: 20vw;
+	min-height: 50vh;
 `;
