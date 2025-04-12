@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 import { theme } from '@/styles/theme';
 
+export const OuterContainer = styled.div`
+	width: 100%;
+	min-height: 100vh;
+	overflow-x: hidden;
+	overscroll-behavior: none;
+`;
+
 export const MainContainer = styled.section`
 	background: linear-gradient(to bottom, #95a7ee 0%, #4967e2 31%, #354dae 100%);
 	height: fit-content;
@@ -189,3 +196,6 @@ export const DownloadLogo = styled.img`
 		filter: brightness(0) invert(1);
 	}
 `;
+
+export const Section = styled.div `
+`
