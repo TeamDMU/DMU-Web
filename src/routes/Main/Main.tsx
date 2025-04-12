@@ -3,12 +3,13 @@ import { useEffect, useRef, useState } from 'react';
 import { theme } from '@/styles/theme';
 import { APP_STORE_LINK, GOOGLE_PLAY_LINK } from '../../constants/links';
 import mainLogo from '../../assets/img/mainLogo.png';
-import noticeIcon from '../../assets/img/notice.png';
+import noticeIcon from '../../assets/img/bubbleIcon.png';
 import appleIcon from '../../assets/icon/appleLogo.svg';
 import googlePlayIcon from '../../assets/icon/googlePlayLogo.svg';
 import decoFirst from '../../assets/img/decoFirst.png';
 import decoSecond from '../../assets/img/decoSecond.png';
 import decoThird from '../../assets/img/decoThird.png';
+import notice from '../../assets/img/notice.png';
 
 function Main() {
 
@@ -87,7 +88,7 @@ function Main() {
 				<S.SectionCategory>공지</S.SectionCategory>
 				<S.SectionTitle>대학 공지와 학과 공지를<br/>한 곳에서 확인하고 싶다면?</S.SectionTitle>
 				<S.SectionSubtitle>소속된 학과를 입력해보세요<br/>우리 학교 모든 공지를 빠르게 확인해요</S.SectionSubtitle>
-				<S.SectionImg/>
+				<S.SectionImg src={notice} alt="notice"/>
 			</S.Section>
 		</S.OuterContainer>
 	);

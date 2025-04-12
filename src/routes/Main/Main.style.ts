@@ -199,15 +199,14 @@ export const DownloadLogo = styled.img`
 
 export const Section = styled.div `
 	background: white;
-	width: 100%;
+	width: 100vw;
 	height: fit-content;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	color: white;
-	padding: 4rem;
-	padding-bottom: 10%;
+	padding: 4rem 0rem;
 	text-align: center;
 `;
 
@@ -251,6 +250,7 @@ export const SectionSubtitle = styled.p`
 	font-weight: 400;
 	color: ${theme.COLOR.Gray400};
   	line-height: 1.2;
+	margin-bottom: 3rem;
 
 	@media (max-width: 768px) {
 		font-size: 1.7rem;
@@ -262,4 +262,8 @@ export const SectionSubtitle = styled.p`
 `;
 
 export const SectionImg = styled.img`
+	object-fit: cover;
+	object-position: left;
+	margin-left: 20vw;
+	min-height: 50vh;
 `;
