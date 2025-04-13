@@ -206,7 +206,7 @@ export const Section = styled.div `
 	align-items: center;
 	justify-content: center;
 	color: white;
-	padding: 4rem 0rem;
+	padding-top: 4rem;
 	text-align: center;
 `;
 
@@ -261,9 +261,56 @@ export const SectionSubtitle = styled.p`
 	}
 `;
 
+export const SectionImgWrapper = styled.div`
+	width: 100vw;
+	height: 80vh;
+	overflow: hidden;
+	padding-left: 4rem;
+
+	@media (max-width: 768px) {
+		height: 45vh;
+		padding-left: 3rem;
+	}
+
+	@media (max-width: 480px) {
+		height: 35vh;
+		padding-left: 2rem;
+	}
+`;
+
 export const SectionImg = styled.img`
+	width: 120vw;
+	height: auto;
 	object-fit: cover;
-	object-position: left;
-	margin-left: 20vw;
-	min-height: 50vh;
+	object-position: top left;
+
+	@media (max-width: 768px) {
+		width: 140vw;
+	}
+
+	@media (max-width: 480px) {
+		width: 160vw;
+	}
+`;
+
+export const SloganContainer = styled.div`
+	background: linear-gradient(to right, #4561D1 0%, #23326B 100%);
+	width: 100wh;
+	text-align: center;
+	padding: 3rem;
+`;
+
+export const SloganText = styled.p`
+	font-size: 2rem;
+	font-weight: 600;
+	color: white;
+  	line-height: 1.2;
+
+	@media (max-width: 768px) {
+		font-size: 1.7rem;
+	}
+
+	@media (max-width: 480px) {
+		font-size: 1.2rem;
+	}
 `;

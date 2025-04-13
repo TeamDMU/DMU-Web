@@ -88,8 +88,15 @@ function Main() {
 				<S.SectionCategory>공지</S.SectionCategory>
 				<S.SectionTitle>대학 공지와 학과 공지를<br/>한 곳에서 확인하고 싶다면?</S.SectionTitle>
 				<S.SectionSubtitle>소속된 학과를 입력해보세요<br/>우리 학교 모든 공지를 빠르게 확인해요</S.SectionSubtitle>
-				<S.SectionImg src={notice} alt="notice"/>
+				<S.SectionImgWrapper>
+					<S.SectionImg src={notice} alt="notice"/>
+				</S.SectionImgWrapper>
 			</S.Section>
+
+			<S.SloganContainer>
+				<S.SloganText>우리 학교 공지를 가장 빠르게</S.SloganText>
+				<S.SloganText>중요한 정보를 놓치지 않게</S.SloganText>
+			</S.SloganContainer>
 		</S.OuterContainer>
 	);
 }
