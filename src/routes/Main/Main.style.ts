@@ -214,10 +214,10 @@ export const Section = styled.div `
 	text-align: center;
 `;
 
-export const SectionCategory = styled.p`
+export const SectionCategory = styled.p<{ textColor : 'Blue400' | 'Blue300'}>`
 	font-size: 1.2rem;
 	font-weight: 600;
-	color: ${theme.COLOR.Blue400};
+	color: ${({ textColor }) => theme.COLOR[textColor]};
 	margin-bottom: 1rem;
 
 	@media (max-width: 768px) {

@@ -85,7 +85,7 @@ function Main() {
 			</S.MainContainer>
 
 			<S.Section>
-				<S.SectionCategory>공지</S.SectionCategory>
+				<S.SectionCategory textColor={'Blue400'}>공지</S.SectionCategory>
 				<S.SectionTitle>대학 공지와 학과 공지를<br/>한 곳에서 확인하고 싶다면?</S.SectionTitle>
 				<S.SectionSubtitle>소속된 학과를 입력해보세요<br/>우리 학교 모든 공지를 빠르게 확인해요</S.SectionSubtitle>
 				<S.SectionImgWrapper>
@@ -97,6 +97,15 @@ function Main() {
 				<S.SloganText>우리 학교 공지를 <S.TextSpan>가장 빠르게</S.TextSpan></S.SloganText>
 				<S.SloganText>중요한 정보를 <S.TextSpan>놓치지 않게</S.TextSpan></S.SloganText>
 			</S.SloganContainer>
+
+			<S.Section>
+				<S.SectionCategory textColor={'Blue300'}>키워드 알림</S.SectionCategory>
+				<S.SectionTitle>실시간으로 올라오는 공지사항을<br/>알림으로 받고 싶다면?</S.SectionTitle>
+				<S.SectionSubtitle>학교 홈페이지에 수시로 들어갈 필요 없이<br/>내가 등록한 키워드의 알림이 실시간으로 도착해요</S.SectionSubtitle>
+				<S.SectionImgWrapper>
+					<S.SectionImg src={notice} alt="notice"/>
+				</S.SectionImgWrapper>
+			</S.Section>
 		</S.OuterContainer>
 	);
 }
