@@ -67,7 +67,7 @@ function Main() {
 				</S.BubbleContainer>
 
 				<S.MainText ref={textRef}>
-					우리 학교 공지를 가장 빠르게<span style={{ color: theme.COLOR.Yellow }}>.</span>
+					우리 학교 공지를 가장 빠르게<S.TextSpan>.</S.TextSpan>
 				</S.MainText>
 				<S.MainLogo src={mainLogo} width={textWidth} />
 
@@ -94,8 +94,8 @@ function Main() {
 			</S.Section>
 
 			<S.SloganContainer>
-				<S.SloganText>우리 학교 공지를 가장 빠르게</S.SloganText>
-				<S.SloganText>중요한 정보를 놓치지 않게</S.SloganText>
+				<S.SloganText>우리 학교 공지를 <S.TextSpan>가장 빠르게</S.TextSpan></S.SloganText>
+				<S.SloganText>중요한 정보를 <S.TextSpan>놓치지 않게</S.TextSpan></S.SloganText>
 			</S.SloganContainer>
 		</S.OuterContainer>
 	);

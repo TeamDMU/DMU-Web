@@ -8,6 +8,10 @@ export const OuterContainer = styled.div`
 	overscroll-behavior: none;
 `;
 
+export const TextSpan = styled.span`
+	color: ${theme.COLOR.Yellow};
+`;
+
 export const MainContainer = styled.section`
 	background: linear-gradient(to bottom, #95a7ee 0%, #4967e2 31%, #354dae 100%);
 	height: fit-content;
