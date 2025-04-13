@@ -10,6 +10,7 @@ import decoFirst from '../../assets/img/decoFirst.png';
 import decoSecond from '../../assets/img/decoSecond.png';
 import decoThird from '../../assets/img/decoThird.png';
 import notice from '../../assets/img/notice.png';
+import keyword from '../../assets/img/keyword.png';
 
 function Main() {
 
@@ -89,7 +90,7 @@ function Main() {
 				<S.SectionTitle>대학 공지와 학과 공지를<br/>한 곳에서 확인하고 싶다면?</S.SectionTitle>
 				<S.SectionSubtitle>소속된 학과를 입력해보세요<br/>우리 학교 모든 공지를 빠르게 확인해요</S.SectionSubtitle>
 				<S.SectionImgWrapper>
-					<S.SectionImg src={notice} alt="notice"/>
+					<S.NoticeImg src={notice} alt="notice"/>
 				</S.SectionImgWrapper>
 			</S.Section>
 
@@ -103,7 +104,7 @@ function Main() {
 				<S.SectionTitle>실시간으로 올라오는 공지사항을<br/>알림으로 받고 싶다면?</S.SectionTitle>
 				<S.SectionSubtitle>학교 홈페이지에 수시로 들어갈 필요 없이<br/>내가 등록한 키워드의 알림이 실시간으로 도착해요</S.SectionSubtitle>
 				<S.SectionImgWrapper>
-					<S.SectionImg src={notice} alt="notice"/>
+					<S.KeywordImg src={keyword} alt="notice"/>
 				</S.SectionImgWrapper>
 			</S.Section>
 		</S.OuterContainer>
