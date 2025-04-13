@@ -297,7 +297,15 @@ export const SloganContainer = styled.div`
 	background: linear-gradient(to right, #4561D1 0%, #23326B 100%);
 	width: 100wh;
 	text-align: center;
-	padding: 3rem;
+	padding: 3.5rem;
+
+	@media (max-width: 768px) {
+		padding: 4rem;
+	}
+
+	@media (max-width: 480px) {
+		padding: 3rem;
+	}
 `;
 
 export const SloganText = styled.p`
@@ -307,10 +315,10 @@ export const SloganText = styled.p`
   	line-height: 1.2;
 
 	@media (max-width: 768px) {
-		font-size: 1.7rem;
+		font-size: 2.2rem;
 	}
 
 	@media (max-width: 480px) {
-		font-size: 1.2rem;
+		font-size: 1.6rem;
 	}
 `;
