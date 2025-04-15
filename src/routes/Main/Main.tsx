@@ -11,6 +11,7 @@ import decoSecond from '../../assets/img/decoSecond.png';
 import decoThird from '../../assets/img/decoThird.png';
 import notice from '../../assets/img/notice.png';
 import keyword from '../../assets/img/keyword.png';
+import schedule from '../../assets/img/schedule.png';
 
 function Main() {
 
@@ -104,7 +105,16 @@ function Main() {
 				<S.SectionTitle>실시간으로 올라오는 공지사항을<br/>알림으로 받고 싶다면?</S.SectionTitle>
 				<S.SectionSubtitle>학교 홈페이지에 수시로 들어갈 필요 없이<br/>내가 등록한 키워드의 알림이 실시간으로 도착해요</S.SectionSubtitle>
 				<S.SectionImgWrapper>
-					<S.KeywordImg src={keyword} alt="notice"/>
+					<S.KeywordImg src={keyword} alt="keyword"/>
+				</S.SectionImgWrapper>
+			</S.Section>
+
+			<S.Section colorBackground={true}>
+				<S.SectionCategory textColor={'BlueLogo'}>학사일정</S.SectionCategory>
+				<S.SectionTitle>학사일정을 빠르게.</S.SectionTitle>
+				<S.SectionSubtitle>월별로 필터링된 학사일정 정보를 확인해요</S.SectionSubtitle>
+				<S.SectionImgWrapper>
+					<S.ScheduleImg src={schedule} alt="schedule"/>
 				</S.SectionImgWrapper>
 			</S.Section>
 		</S.OuterContainer>

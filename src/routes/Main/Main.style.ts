@@ -201,7 +201,7 @@ export const DownloadLogo = styled.img`
 	}
 `;
 
-export const Section = styled.div `
+export const Section = styled.div<{colorBackground?: boolean}>`
 	background: white;
 	width: 100vw;
 	height: fit-content;
@@ -212,9 +212,11 @@ export const Section = styled.div `
 	color: white;
 	padding-top: 4rem;
 	text-align: center;
+	background: ${({ colorBackground }) => 
+  colorBackground ? theme.COLOR.Blue200 : 'white'};
 `;
 
-export const SectionCategory = styled.p<{ textColor : 'Blue400' | 'Blue300'}>`
+export const SectionCategory = styled.p<{ textColor : 'Blue400' | 'Blue300' | 'BlueLogo'}>`
 	font-size: 1.2rem;
 	font-weight: 600;
 	color: ${({ textColor }) => theme.COLOR[textColor]};
@@ -265,6 +267,65 @@ export const SectionSubtitle = styled.p`
 	}
 `;
 
+export const SectionImgWrapper = styled.div`
+	width: 100vw;
+	overflow: hidden;
+
+	@media (max-width: 768px) {
+		height: 45vh;
+	}
+
+	@media (max-width: 480px) {
+		height: 35vh;
+	}
+`;
+
+const BaseImg = styled.img`
+	object-fit: cover;
+`;
+
+export const NoticeImg = styled(BaseImg)`
+	width: 120vw;
+	height: auto;
+	padding-left: 4rem;
+
+	@media (max-width: 768px) {
+		width: 140vw;
+		padding-left: 3rem;
+	}
+
+	@media (max-width: 480px) {
+		width: 160vw;
+		padding-left: 2rem;
+	}
+`;
+
+export const KeywordImg = styled(BaseImg)`
+	width: 40vw;
+	height: auto;
+
+	@media (max-width: 768px) {
+		width: 50vw;
+	}
+
+	@media (max-width: 480px) {
+		width: 60vw;
+	}
+`;
+
+export const ScheduleImg = styled(BaseImg)`
+	width: 48vw;
+	height: auto;
+
+	@media (max-width: 768px) {
+		width: 60vw;
+	}
+
+	@media (max-width: 480px) {
+		width: 80vw;
+	}
+`;
+
 export const SloganContainer = styled.div`
 	background: linear-gradient(to right, #4561D1 0%, #23326B 100%);
 	width: 100wh;
@@ -292,53 +353,5 @@ export const SloganText = styled.p`
 
 	@media (max-width: 480px) {
 		font-size: 1.6rem;
-	}
-`;
-
-export const SectionImgWrapper = styled.div`
-	width: 100vw;
-	height: 80vh;
-	overflow: hidden;
-	padding-left: 4rem;
-
-	@media (max-width: 768px) {
-		height: 45vh;
-		padding-left: 3rem;
-	}
-
-	@media (max-width: 480px) {
-		height: 35vh;
-		padding-left: 2rem;
-	}
-`;
-
-const BaseImg = styled.img`
-	object-fit: cover;
-	object-position: top left;
-`;
-
-export const NoticeImg = styled(BaseImg)`
-	width: 120vw;
-	height: auto;
-
-	@media (max-width: 768px) {
-		width: 140vw;
-	}
-
-	@media (max-width: 480px) {
-		width: 160vw;
-	}
-`;
-
-export const KeywordImg = styled(BaseImg)`
-	width: 40vw;
-	height: auto;
-
-	@media (max-width: 768px) {
-		width: 50vw;
-	}
-
-	@media (max-width: 480px) {
-		width: 60vw;
 	}
 `;
