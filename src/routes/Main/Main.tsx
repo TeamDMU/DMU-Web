@@ -1,6 +1,6 @@
 import * as S from './Main.style';
 import { useEffect, useRef, useState } from 'react';
-import { APP_STORE_LINK, GOOGLE_PLAY_LINK } from '../../constants/links';
+import { APP_STORE_LINK, GOOGLE_PLAY_LINK, PRIVACY_LINK, INQUIRY_LINK, INSTA_LINK, GITHUB_LINK } from '../../constants/links';
 import mainLogo from '../../assets/img/mainLogo.png';
 import noticeIcon from '../../assets/img/bubbleIcon.png';
 import appleIcon from '../../assets/icon/appleLogo.svg';
@@ -12,6 +12,9 @@ import notice from '../../assets/img/notice.png';
 import keyword from '../../assets/img/keyword.png';
 import schedule from '../../assets/img/schedule.png';
 import menu from '../../assets/img/menu.png';
+import dmuLogo from '../../assets/icon/dmuRowLogo.svg';
+import githubLogo from '../../assets/icon/githubLogo.svg'
+import instaLogo from '../../assets/icon/instaLogo.svg'
 
 function Main() {
 
@@ -75,12 +78,12 @@ function Main() {
 				<S.MainLogo src={mainLogo} width={textWidth} />
 
 				<S.DownloadContainer>
-					<S.DownloadButton href={APP_STORE_LINK} target="_blank">
+					<S.DownloadButton href={APP_STORE_LINK} target="_blank" rel="noopener noreferrer">
 						<S.DownloadLogo src={appleIcon} alt="App Store" />
 						App Store
 					</S.DownloadButton>
 
-					<S.DownloadButton href={GOOGLE_PLAY_LINK} target="_blank">
+					<S.DownloadButton href={GOOGLE_PLAY_LINK} target="_blank" rel="noopener noreferrer">
 						<S.DownloadLogo src={googlePlayIcon} alt="Google Play" />
 						Google Play
 					</S.DownloadButton>
@@ -126,6 +129,29 @@ function Main() {
 				<S.SectionSubtitle>매주 달라지는 한식 & 요일별로 달라지는 일품<br/>학교 식당 정보를 확인해요</S.SectionSubtitle>
 				<S.SectionImg src={menu} alt="menu"/>
 			</S.Section>
+
+			{/* 푸터 */}
+			<S.FooterContainer>
+				<S.LinkContainer>
+					<a href={INSTA_LINK} target="_blank" rel="noopener noreferrer">
+  						<S.FooterLogo src={instaLogo} alt="Insta Logo" />
+					</a>
+
+					<a href={GITHUB_LINK} target="_blank" rel="noopener noreferrer">
+  						<S.FooterLogo src={githubLogo} alt="GitHub Logo" />
+					</a>
+				</S.LinkContainer>
+
+				<S.InfoContainer>.
+					<S.Logo src={dmuLogo} alt="DMforU Logo" />
+					<S.LinkText href={PRIVACY_LINK} target="_blank" rel="noopener noreferrer">개인정보처리방침</S.LinkText>
+					<S.LinkText href={INQUIRY_LINK} target="_blank" rel="noopener noreferrer">문의하기</S.LinkText>
+				</S.InfoContainer>
+
+				<S.BottomText>
+					Team DMU | 문의: Teamdmforu@gmail.com <br/>©2024 DMforU, All Rights Reserved.
+				</S.BottomText>
+			</S.FooterContainer>
 		</S.OuterContainer>
 	);
 }

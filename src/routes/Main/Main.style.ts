@@ -312,7 +312,7 @@ export const SectionImg = styled.img`
 
 export const SloganContainer = styled.div`
 	background: linear-gradient(to right, #4561D1 0%, #23326B 100%);
-	width: 100wh;
+	width: 100vw;
 	text-align: center;
 	padding: 3.5rem;
 
@@ -337,5 +337,98 @@ export const SloganText = styled.p`
 
 	@media (max-width: 480px) {
 		font-size: 1.6rem;
+	}
+`;
+
+export const FooterContainer = styled.div`
+	display: flex;
+	width: 100vw;
+	height: fit-content;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	background: linear-gradient(to bottom, #354DAE 0%, #162048 100%);
+	padding: 4rem;
+	text-align: center;
+	color: white;
+	gap: 2.5rem;
+
+	@media (max-width: 768px) {
+		gap: 2rem;
+	}
+
+	@media (max-width: 480px) {
+		gap: 1.5rem;
+	}
+`;
+
+export const LinkContainer = styled.div`
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5rem;
+`;
+
+export const FooterLogo = styled.img`
+	width: 2.5rem;
+	height: 2.5rem;
+	
+	@media (max-width: 768px) {
+		width: 3rem;
+		height: 3rem;
+	}
+
+	@media (max-width: 480px) {
+		width: 2rem;
+		height: 2rem;
+	}
+`;
+
+export const InfoContainer = styled.div`
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5rem;
+	white-space: nowrap;
+`;
+
+export const Logo = styled.img`
+	height: 1.2rem;
+
+	@media (max-width: 768px) {
+		height: 1.7rem;
+	}
+
+	@media (max-width: 480px) {
+		height: 1.2rem;
+	}
+`;
+
+export const LinkText = styled.a`
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: white;
+
+	@media (max-width: 768px) {
+		font-size: 1.7rem;
+	}
+
+	@media (max-width: 480px) {
+		font-size: 1.2rem;
+	}
+`;
+
+export const BottomText = styled.p`
+	font-size: 1rem;
+	font-weight: 500;
+
+	@media (max-width: 768px) {
+		font-size: 1.3rem;
+	}
+
+	@media (max-width: 480px) {
+		font-size: 0.9rem;
 	}
 `;
