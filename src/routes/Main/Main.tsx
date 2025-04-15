@@ -47,6 +47,7 @@ function Main() {
 
 	return (
 		<S.OuterContainer>
+			{/* 메인 */}
 			<S.MainContainer>
 				<S.MainDecoration src={decoFirst} order={1} />
 				<S.MainDecoration src={decoSecond} order={2} />
@@ -85,6 +86,7 @@ function Main() {
 				</S.DownloadContainer>
 			</S.MainContainer>
 
+			{/* 공지 */}
 			<S.Section>
 				<S.SectionCategory textColor={'Blue400'}>공지</S.SectionCategory>
 				<S.SectionTitle>대학 공지와 학과 공지를<br/>한 곳에서 확인하고 싶다면?</S.SectionTitle>
@@ -94,11 +96,13 @@ function Main() {
 				</S.NoticeImgWrapper>
 			</S.Section>
 
+			{/* 슬로건 */}
 			<S.SloganContainer>
 				<S.SloganText>우리 학교 공지를 <S.TextSpan>가장 빠르게</S.TextSpan></S.SloganText>
 				<S.SloganText>중요한 정보를 <S.TextSpan>놓치지 않게</S.TextSpan></S.SloganText>
 			</S.SloganContainer>
 
+			{/* 키워드 */}
 			<S.Section>
 				<S.SectionCategory textColor={'Blue300'}>키워드 알림</S.SectionCategory>
 				<S.SectionTitle>실시간으로 올라오는 공지사항을<br/>알림으로 받고 싶다면?</S.SectionTitle>
@@ -106,7 +110,16 @@ function Main() {
 				<S.SectionImg src={keyword} alt="keyword"/>
 			</S.Section>
 
+			{/* 식단 */}
 			<S.Section colorBackground={true}>
+				<S.SectionCategory textColor={'BlueLogo'}>학사일정</S.SectionCategory>
+				<S.SectionTitle>학사일정을 빠르게.</S.SectionTitle>
+				<S.SectionSubtitle>월별로 필터링된 학사일정 정보를 확인해요</S.SectionSubtitle>
+				<S.SectionImg src={schedule} alt="schedule"/>
+			</S.Section>
+
+			{/* 식단 */}
+			<S.Section>
 				<S.SectionCategory textColor={'BlueLogo'}>학사일정</S.SectionCategory>
 				<S.SectionTitle>학사일정을 빠르게.</S.SectionTitle>
 				<S.SectionSubtitle>월별로 필터링된 학사일정 정보를 확인해요</S.SectionSubtitle>
