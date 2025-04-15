@@ -267,8 +267,9 @@ export const SectionSubtitle = styled.p`
 	}
 `;
 
-export const SectionImgWrapper = styled.div`
+export const NoticeImgWrapper = styled.div`
 	width: 100vw;
+	height: 80vh;
 	overflow: hidden;
 
 	@media (max-width: 768px) {
@@ -276,18 +277,15 @@ export const SectionImgWrapper = styled.div`
 	}
 
 	@media (max-width: 480px) {
-		height: 35vh;
+		height: 30vh;
 	}
 `;
 
-const BaseImg = styled.img`
-	object-fit: cover;
-`;
-
-export const NoticeImg = styled(BaseImg)`
+export const NoticeImg = styled.img`
 	width: 120vw;
 	height: auto;
 	padding-left: 4rem;
+	object-fit: cover;
 
 	@media (max-width: 768px) {
 		width: 140vw;
@@ -300,22 +298,8 @@ export const NoticeImg = styled(BaseImg)`
 	}
 `;
 
-export const KeywordImg = styled(BaseImg)`
-	width: 40vw;
-	height: auto;
-
-	@media (max-width: 768px) {
-		width: 50vw;
-	}
-
-	@media (max-width: 480px) {
-		width: 60vw;
-	}
-`;
-
-export const ScheduleImg = styled(BaseImg)`
-	width: 48vw;
-	height: auto;
+export const SectionImg = styled.img`
+	width: 50vw;
 
 	@media (max-width: 768px) {
 		width: 60vw;
