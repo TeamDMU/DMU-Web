@@ -78,12 +78,12 @@ function Main() {
 				<S.MainLogo src={mainLogo} width={textWidth} />
 
 				<S.DownloadContainer>
-					<S.DownloadButton href={APP_STORE_LINK} target="_blank">
+					<S.DownloadButton href={APP_STORE_LINK} target="_blank" rel="noopener noreferrer">
 						<S.DownloadLogo src={appleIcon} alt="App Store" />
 						App Store
 					</S.DownloadButton>
 
-					<S.DownloadButton href={GOOGLE_PLAY_LINK} target="_blank">
+					<S.DownloadButton href={GOOGLE_PLAY_LINK} target="_blank" rel="noopener noreferrer">
 						<S.DownloadLogo src={googlePlayIcon} alt="Google Play" />
 						Google Play
 					</S.DownloadButton>
@@ -133,19 +133,19 @@ function Main() {
 			{/* 푸터 */}
 			<S.FooterContainer>
 				<S.LinkContainer>
-					<a href={INSTA_LINK} target="_blank">
+					<a href={INSTA_LINK} target="_blank" rel="noopener noreferrer">
   						<S.FooterLogo src={instaLogo} alt="Insta Logo" />
 					</a>
 
-					<a href={GITHUB_LINK} target="_blank">
+					<a href={GITHUB_LINK} target="_blank" rel="noopener noreferrer">
   						<S.FooterLogo src={githubLogo} alt="GitHub Logo" />
 					</a>
 				</S.LinkContainer>
 
 				<S.InfoContainer>.
 					<S.Logo src={dmuLogo} alt="DMforU Logo" />
-					<S.LinkText href={PRIVACY_LINK} target="_blank">개인정보처리방침</S.LinkText>
-					<S.LinkText href={INQUIRY_LINK} target="_blank">문의하기</S.LinkText>
+					<S.LinkText href={PRIVACY_LINK} target="_blank" rel="noopener noreferrer">개인정보처리방침</S.LinkText>
+					<S.LinkText href={INQUIRY_LINK} target="_blank" rel="noopener noreferrer">문의하기</S.LinkText>
 				</S.InfoContainer>
 
 				<S.BottomText>
