@@ -1,6 +1,5 @@
 import * as S from './Main.style';
 import { useEffect, useRef, useState } from 'react';
-import { theme } from '@/styles/theme';
 import { APP_STORE_LINK, GOOGLE_PLAY_LINK } from '../../constants/links';
 import mainLogo from '../../assets/img/mainLogo.png';
 import noticeIcon from '../../assets/img/bubbleIcon.png';
