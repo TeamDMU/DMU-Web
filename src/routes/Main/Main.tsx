@@ -1,6 +1,6 @@
 import * as S from './Main.style';
 import { useEffect, useRef, useState } from 'react';
-import { APP_STORE_LINK, GOOGLE_PLAY_LINK } from '../../constants/links';
+import { APP_STORE_LINK, GOOGLE_PLAY_LINK, PRIVACY_LINK, INQUIRY_LINK } from '../../constants/links';
 import mainLogo from '../../assets/img/mainLogo.png';
 import noticeIcon from '../../assets/img/bubbleIcon.png';
 import appleIcon from '../../assets/icon/appleLogo.svg';
@@ -12,6 +12,7 @@ import notice from '../../assets/img/notice.png';
 import keyword from '../../assets/img/keyword.png';
 import schedule from '../../assets/img/schedule.png';
 import menu from '../../assets/img/menu.png';
+import dmuLogo from '../../assets/icon/dmuRowLogo.svg';
 
 function Main() {
 
@@ -135,14 +136,13 @@ function Main() {
 				</S.LinkContainer>
 
 				<S.InfoContainer>.
-					<S.Logo src="" alt="DMforU Logo" />
-					<S.LinkText href="">개인정보처리방침</S.LinkText>
-					<S.LinkText href="">문의하기</S.LinkText>
+					<S.Logo src={dmuLogo} alt="DMforU Logo" />
+					<S.LinkText href={PRIVACY_LINK} target="_blank">개인정보처리방침</S.LinkText>
+					<S.LinkText href={INQUIRY_LINK} target="_blank">문의하기</S.LinkText>
 				</S.InfoContainer>
 
 				<S.BottomText>
-					Team DMU | 문의: Teamdmforu@gmail.com <br />
-					©2024 DMforU, All Rights Reserved.
+					Team DMU | 문의: Teamdmforu@gmail.com <br/>©2024 DMforU, All Rights Reserved.
 				</S.BottomText>
 			</S.FooterContainer>
 		</S.OuterContainer>

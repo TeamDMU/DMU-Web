@@ -345,11 +345,13 @@ export const FooterContainer = styled.div`
 	width: 100vw;
 	height: fit-content;
 	align-items: center;
-	background: linear-gradient(to bottom, #354DAE 0%, #162048 100%);
-	padding: 4rem;
 	flex-direction: column;
 	justify-content: center;
+	background: linear-gradient(to bottom, #354DAE 0%, #162048 100%);
+	padding: 4rem;
+	text-align: center;
 	color: white;
+	gap: 3rem;
 `;
 
 export const LinkContainer = styled.div`
@@ -359,13 +361,49 @@ export const FooterLogo = styled.a`
 `;
 
 export const InfoContainer = styled.div`
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5rem;
+	white-space: nowrap;
 `;
 
 export const Logo = styled.img`
+	height: 1.2rem;
+
+	@media (max-width: 768px) {
+		height: 1.7rem;
+	}
+
+	@media (max-width: 480px) {
+		height: 1.2rem;
+	}
 `;
 
-export const LinkText = styled.text`
+export const LinkText = styled.a`
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: white;
+
+	@media (max-width: 768px) {
+		font-size: 1.7rem;
+	}
+
+	@media (max-width: 480px) {
+		font-size: 1.2rem;
+	}
 `;
 
-export const BottomText = styled.text`
+export const BottomText = styled.p`
+	font-size: 1rem;
+	font-weight: 500;
+
+	@media (max-width: 768px) {
+		font-size: 1.7rem;
+	}
+
+	@media (max-width: 480px) {
+		font-size: 1.2rem;
+	}
 `;
