@@ -13,6 +13,8 @@ import keyword from '../../assets/img/keyword.png';
 import schedule from '../../assets/img/schedule.png';
 import menu from '../../assets/img/menu.png';
 import dmuLogo from '../../assets/icon/dmuRowLogo.svg';
+import githubLogo from '../../assets/icon/githubLogo.svg'
+import instaLogo from '../../assets/icon/instaLogo.svg'
 
 function Main() {
 
@@ -131,8 +133,13 @@ function Main() {
 			{/* 푸터 */}
 			<S.FooterContainer>
 				<S.LinkContainer>
-					<S.FooterLogo href="https://instagram.com" target="_blank" aria-label="Instagram" />
-					<S.FooterLogo href="https://github.com" target="_blank" aria-label="GitHub" />
+					<a href="https://instagram.com" target="_blank">
+  						<S.FooterLogo src={instaLogo} alt="Insta Logo" />
+					</a>
+
+					<a href="https://github.com" target="_blank">
+  						<S.FooterLogo src={githubLogo} alt="GitHub Logo" />
+					</a>
 				</S.LinkContainer>
 
 				<S.InfoContainer>.

@@ -351,13 +351,38 @@ export const FooterContainer = styled.div`
 	padding: 4rem;
 	text-align: center;
 	color: white;
-	gap: 3rem;
+	gap: 2.5rem;
+
+	@media (max-width: 768px) {
+		gap: 2rem;
+	}
+
+	@media (max-width: 480px) {
+		gap: 1.5rem;
+	}
 `;
 
 export const LinkContainer = styled.div`
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5rem;
 `;
 
-export const FooterLogo = styled.a`
+export const FooterLogo = styled.img`
+	width: 2.5rem;
+	height: 2.5rem;
+	
+	@media (max-width: 768px) {
+		width: 3rem;
+		height: 3rem;
+	}
+
+	@media (max-width: 480px) {
+		width: 2rem;
+		height: 2rem;
+	}
 `;
 
 export const InfoContainer = styled.div`
@@ -400,10 +425,10 @@ export const BottomText = styled.p`
 	font-weight: 500;
 
 	@media (max-width: 768px) {
-		font-size: 1.7rem;
+		font-size: 1.3rem;
 	}
 
 	@media (max-width: 480px) {
-		font-size: 1.2rem;
+		font-size: 0.9rem;
 	}
 `;
