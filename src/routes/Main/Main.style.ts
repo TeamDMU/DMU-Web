@@ -312,7 +312,7 @@ export const SectionImg = styled.img`
 
 export const SloganContainer = styled.div`
 	background: linear-gradient(to right, #4561D1 0%, #23326B 100%);
-	width: 100wh;
+	width: 100vw;
 	text-align: center;
 	padding: 3.5rem;
 
@@ -338,4 +338,34 @@ export const SloganText = styled.p`
 	@media (max-width: 480px) {
 		font-size: 1.6rem;
 	}
+`;
+
+export const FooterContainer = styled.div`
+	display: flex;
+	width: 100vw;
+	height: fit-content;
+	align-items: center;
+	background: linear-gradient(to bottom, #354DAE 0%, #162048 100%);
+	padding: 4rem;
+	flex-direction: column;
+	justify-content: center;
+	color: white;
+`;
+
+export const LinkContainer = styled.div`
+`;
+
+export const FooterLogo = styled.a`
+`;
+
+export const InfoContainer = styled.div`
+`;
+
+export const Logo = styled.img`
+`;
+
+export const LinkText = styled.text`
+`;
+
+export const BottomText = styled.text`
 `;

@@ -126,6 +126,25 @@ function Main() {
 				<S.SectionSubtitle>매주 달라지는 한식 & 요일별로 달라지는 일품<br/>학교 식당 정보를 확인해요</S.SectionSubtitle>
 				<S.SectionImg src={menu} alt="menu"/>
 			</S.Section>
+
+			{/* 푸터 */}
+			<S.FooterContainer>
+				<S.LinkContainer>
+					<S.FooterLogo href="https://instagram.com" target="_blank" aria-label="Instagram" />
+					<S.FooterLogo href="https://github.com" target="_blank" aria-label="GitHub" />
+				</S.LinkContainer>
+
+				<S.InfoContainer>.
+					<S.Logo src="" alt="DMforU Logo" />
+					<S.LinkText href="">개인정보처리방침</S.LinkText>
+					<S.LinkText href="">문의하기</S.LinkText>
+				</S.InfoContainer>
+
+				<S.BottomText>
+					Team DMU | 문의: Teamdmforu@gmail.com <br />
+					©2024 DMforU, All Rights Reserved.
+				</S.BottomText>
+			</S.FooterContainer>
 		</S.OuterContainer>
 	);
 }
