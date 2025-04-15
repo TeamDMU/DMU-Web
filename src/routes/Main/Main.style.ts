@@ -32,6 +32,39 @@ export const MainContainer = styled.section`
 	}
 `;
 
+export const HeaderWrapper = styled.div<{ showHeader: boolean }>`
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: white;
+	z-index: 100;
+	transition: box-shadow 0.3s ease, opacity 0.3s ease;
+	box-shadow: ${({ showHeader }) => (showHeader ? '0 4px 12px rgba(0, 0, 0, 0.1)' : 'none')};
+	opacity: ${({ showHeader }) => (showHeader ? 1 : 0)};
+	pointer-events: ${({ showHeader }) => (showHeader ? 'auto' : 'none')};
+`;
+
+export const HeaderContainer = styled.div`
+	max-width: 760px;
+	margin: 0 auto;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+`;
+
+export const HeaderLogoContainer = styled.div`
+	display: flex;
+	align-items: center;
+	gap: 8px;
+`;
+
+export const HeaderLogo = styled.img`
+	width: 32px;
+	height: 32px;
+`;
+
 export const MainDecoration = styled.img<{ order: 1 | 2 | 3 }>`
 	position: absolute;
 	opacity: 0.2;

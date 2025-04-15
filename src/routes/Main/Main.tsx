@@ -17,31 +17,35 @@ import githubLogo from '../../assets/icon/githubLogo.svg'
 import instaLogo from '../../assets/icon/instaLogo.svg'
 
 function Main() {
-
 	const textRef = useRef<HTMLParagraphElement>(null);
+	const mainRef = useRef<HTMLDivElement>(null);
+
 	const [textWidth, setTextWidth] = useState<number>(0);
+	const [showHeader, setShowHeader] = useState(false);
 
-
-	// 헤더용 사용 예정
-	// const [isScrolled, setIsScrolled] = useState(false);
-
-	// useEffect(() => {
-	// 	const handleScroll = () => {
-	// 		const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-	// 		setIsScrolled(scrollPosition > 10);
-	// 	};
-
-	// 	// 초기 스크롤 상태 확인
-	// 	handleScroll();
-
-	// 	// 이벤트 리스너 등록
-	// 	window.addEventListener('scroll', handleScroll, { passive: true });
-
-	// 	return () => {
-	// 		window.removeEventListener('scroll', handleScroll);
-	// 	};
-	// }, []);
-
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				setShowHeader(!entry.isIntersecting);
+			},
+			{
+				root: null,
+				threshold: 0,
+				rootMargin: '-80px 0px 0px 0px'
+			}
+		);
+	
+		if (mainRef.current) {
+			observer.observe(mainRef.current);
+		}
+	
+		return () => {
+			if (mainRef.current) {
+				observer.unobserve(mainRef.current);
+			}
+		};
+	}, []);
+	
 	useEffect(() => {
 		if (textRef.current) {
 			const width = textRef.current.offsetWidth;
@@ -51,8 +55,15 @@ function Main() {
 
 	return (
 		<S.OuterContainer>
+			{/* 헤더 */}
+			<S.HeaderWrapper showHeader={showHeader}>
+				<S.HeaderContainer>
+					<S.HeaderLogo src={mainLogo} alt="Logo" />
+				</S.HeaderContainer>
+			</S.HeaderWrapper>
+
 			{/* 메인 */}
-			<S.MainContainer>
+			<S.MainContainer ref={mainRef}>
 				<S.MainDecoration src={decoFirst} order={1} />
 				<S.MainDecoration src={decoSecond} order={2} />
 				<S.MainDecoration src={decoThird} order={3} />
