@@ -12,36 +12,40 @@ import notice from '../../assets/img/notice.png';
 import keyword from '../../assets/img/keyword.png';
 import schedule from '../../assets/img/schedule.png';
 import menu from '../../assets/img/menu.png';
-import dmuLogo from '../../assets/icon/dmuRowLogo.svg';
+import dmuHeaderLogo from '../../assets/icon/dmuHeaderLogo.svg';
+import dmuFooterLogo from '../../assets/icon/dmuFooterLogo.svg';
 import githubLogo from '../../assets/icon/githubLogo.svg'
 import instaLogo from '../../assets/icon/instaLogo.svg'
 
 function Main() {
-
 	const textRef = useRef<HTMLParagraphElement>(null);
+	const downloadRef = useRef<HTMLDivElement>(null);
+
 	const [textWidth, setTextWidth] = useState<number>(0);
+	const [showHeader, setShowHeader] = useState(false);
 
-
-	// 헤더용 사용 예정
-	// const [isScrolled, setIsScrolled] = useState(false);
-
-	// useEffect(() => {
-	// 	const handleScroll = () => {
-	// 		const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-	// 		setIsScrolled(scrollPosition > 10);
-	// 	};
-
-	// 	// 초기 스크롤 상태 확인
-	// 	handleScroll();
-
-	// 	// 이벤트 리스너 등록
-	// 	window.addEventListener('scroll', handleScroll, { passive: true });
-
-	// 	return () => {
-	// 		window.removeEventListener('scroll', handleScroll);
-	// 	};
-	// }, []);
-
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				setShowHeader(!entry.isIntersecting);
+			},
+			{
+				root: null,
+				threshold: 0,
+			}
+		);
+	
+		if (downloadRef.current) {
+			observer.observe(downloadRef.current);
+		}
+	
+		return () => {
+			if (downloadRef.current) {
+				observer.unobserve(downloadRef.current);
+			}
+		};
+	}, []);	
+	
 	useEffect(() => {
 		if (textRef.current) {
 			const width = textRef.current.offsetWidth;
@@ -51,6 +55,24 @@ function Main() {
 
 	return (
 		<S.OuterContainer>
+			{/* 헤더 */}
+			<S.HeaderWrapper showHeader={showHeader}>
+				<S.HeaderContainer>
+					<S.HeaderLogo src={dmuHeaderLogo} alt="Logo" />
+					<S.HeaderButtonContainer>
+						<S.HeaderDownloadButton href={APP_STORE_LINK} target="_blank" rel="noopener noreferrer">
+							<S.HeaderDownloadLogo src={appleIcon} alt="App Store" />
+							App Store
+						</S.HeaderDownloadButton>
+
+						<S.HeaderDownloadButton href={GOOGLE_PLAY_LINK} target="_blank" rel="noopener noreferrer">
+							<S.HeaderDownloadLogo src={googlePlayIcon} alt="Google Play" />
+							Google Play
+						</S.HeaderDownloadButton>
+					</S.HeaderButtonContainer>
+				</S.HeaderContainer>
+			</S.HeaderWrapper>
+
 			{/* 메인 */}
 			<S.MainContainer>
 				<S.MainDecoration src={decoFirst} order={1} />
@@ -77,7 +99,7 @@ function Main() {
 				</S.MainText>
 				<S.MainLogo src={mainLogo} width={textWidth} />
 
-				<S.DownloadContainer>
+				<S.DownloadContainer ref={downloadRef}>
 					<S.DownloadButton href={APP_STORE_LINK} target="_blank" rel="noopener noreferrer">
 						<S.DownloadLogo src={appleIcon} alt="App Store" />
 						App Store
@@ -143,7 +165,7 @@ function Main() {
 				</S.LinkContainer>
 
 				<S.InfoContainer>.
-					<S.Logo src={dmuLogo} alt="DMforU Logo" />
+					<S.Logo src={dmuFooterLogo} alt="DMforU Logo" />
 					<S.LinkText href={PRIVACY_LINK} target="_blank" rel="noopener noreferrer">개인정보처리방침</S.LinkText>
 					<S.LinkText href={INQUIRY_LINK} target="_blank" rel="noopener noreferrer">문의하기</S.LinkText>
 				</S.InfoContainer>
