@@ -11,6 +11,7 @@ import decoThird from '../../assets/img/decoThird.png';
 import notice from '../../assets/img/notice.png';
 import keyword from '../../assets/img/keyword.png';
 import schedule from '../../assets/img/schedule.png';
+import menu from '../../assets/img/menu.png';
 
 function Main() {
 
@@ -119,11 +120,11 @@ function Main() {
 			</S.Section>
 
 			{/* 식단 */}
-			<S.Section>
-				<S.SectionCategory textColor={'BlueLogo'}>학사일정</S.SectionCategory>
-				<S.SectionTitle>학사일정을 빠르게.</S.SectionTitle>
-				<S.SectionSubtitle>월별로 필터링된 학사일정 정보를 확인해요</S.SectionSubtitle>
-				<S.SectionImg src={schedule} alt="schedule"/>
+			<S.Section style={{paddingBottom: '2rem'}}>
+				<S.SectionCategory textColor={'BlueLogo'}>금주의 식단</S.SectionCategory>
+				<S.SectionTitle>한식부터 일품 메뉴를 한 곳에서.</S.SectionTitle>
+				<S.SectionSubtitle>매주 달라지는 한식 & 요일별로 달라지는 일품<br/>학교 식당 정보를 확인해요</S.SectionSubtitle>
+				<S.SectionImg src={menu} alt="menu"/>
 			</S.Section>
 		</S.OuterContainer>
 	);
