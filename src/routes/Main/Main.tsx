@@ -1,6 +1,6 @@
 import * as S from './Main.style';
 import { useEffect, useRef, useState } from 'react';
-import { APP_STORE_LINK, GOOGLE_PLAY_LINK, PRIVACY_LINK, INQUIRY_LINK } from '../../constants/links';
+import { APP_STORE_LINK, GOOGLE_PLAY_LINK, PRIVACY_LINK, INQUIRY_LINK, INSTA_LINK, GITHUB_LINK } from '../../constants/links';
 import mainLogo from '../../assets/img/mainLogo.png';
 import noticeIcon from '../../assets/img/bubbleIcon.png';
 import appleIcon from '../../assets/icon/appleLogo.svg';
@@ -133,11 +133,11 @@ function Main() {
 			{/* 푸터 */}
 			<S.FooterContainer>
 				<S.LinkContainer>
-					<a href="https://instagram.com" target="_blank">
+					<a href={INSTA_LINK} target="_blank">
   						<S.FooterLogo src={instaLogo} alt="Insta Logo" />
 					</a>
 
-					<a href="https://github.com" target="_blank">
+					<a href={GITHUB_LINK} target="_blank">
   						<S.FooterLogo src={githubLogo} alt="GitHub Logo" />
 					</a>
 				</S.LinkContainer>
