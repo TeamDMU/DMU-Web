@@ -12,7 +12,8 @@ import notice from '../../assets/img/notice.png';
 import keyword from '../../assets/img/keyword.png';
 import schedule from '../../assets/img/schedule.png';
 import menu from '../../assets/img/menu.png';
-import dmuLogo from '../../assets/icon/dmuRowLogo.svg';
+import dmuHeaderLogo from '../../assets/icon/dmuHeaderLogo.svg';
+import dmuFooterLogo from '../../assets/icon/dmuFooterLogo.svg';
 import githubLogo from '../../assets/icon/githubLogo.svg'
 import instaLogo from '../../assets/icon/instaLogo.svg'
 
@@ -26,7 +27,7 @@ function Main() {
 	useEffect(() => {
 		const observer = new IntersectionObserver(
 			([entry]) => {
-				setShowHeader(!entry.isIntersecting); // Download 영역이 사라지면 헤더 표시
+				setShowHeader(!entry.isIntersecting);
 			},
 			{
 				root: null,
@@ -57,7 +58,7 @@ function Main() {
 			{/* 헤더 */}
 			<S.HeaderWrapper showHeader={showHeader}>
 				<S.HeaderContainer>
-					<S.HeaderLogo src={mainLogo} alt="Logo" />
+					<S.HeaderLogo src={dmuHeaderLogo} alt="Logo" />
 				</S.HeaderContainer>
 			</S.HeaderWrapper>
 
@@ -153,7 +154,7 @@ function Main() {
 				</S.LinkContainer>
 
 				<S.InfoContainer>.
-					<S.Logo src={dmuLogo} alt="DMforU Logo" />
+					<S.Logo src={dmuFooterLogo} alt="DMforU Logo" />
 					<S.LinkText href={PRIVACY_LINK} target="_blank" rel="noopener noreferrer">개인정보처리방침</S.LinkText>
 					<S.LinkText href={INQUIRY_LINK} target="_blank" rel="noopener noreferrer">문의하기</S.LinkText>
 				</S.InfoContainer>

@@ -46,23 +46,26 @@ export const HeaderWrapper = styled.div<{ showHeader: boolean }>`
 `;
 
 export const HeaderContainer = styled.div`
-	max-width: 760px;
-	margin: 0 auto;
-	padding: 20px;
+	width: 100vw;
+	padding: 1.5rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 `;
 
-export const HeaderLogoContainer = styled.div`
-	display: flex;
-	align-items: center;
-	gap: 8px;
-`;
-
 export const HeaderLogo = styled.img`
-	width: 32px;
-	height: 32px;
+	width: 10rem;
+	margin-left: 5rem;
+
+	@media (max-width: 768px) {
+		width: 10rem;
+		margin-left: 3rem;
+	}
+
+	@media (max-width: 480px) {
+		width: 8rem;
+		margin-left: 1.5rem;
+	}
 `;
 
 export const MainDecoration = styled.img<{ order: 1 | 2 | 3 }>`
