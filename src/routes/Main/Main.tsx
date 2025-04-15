@@ -18,7 +18,7 @@ import instaLogo from '../../assets/icon/instaLogo.svg'
 
 function Main() {
 	const textRef = useRef<HTMLParagraphElement>(null);
-	const mainRef = useRef<HTMLDivElement>(null);
+	const downloadRef = useRef<HTMLDivElement>(null);
 
 	const [textWidth, setTextWidth] = useState<number>(0);
 	const [showHeader, setShowHeader] = useState(false);
@@ -26,25 +26,24 @@ function Main() {
 	useEffect(() => {
 		const observer = new IntersectionObserver(
 			([entry]) => {
-				setShowHeader(!entry.isIntersecting);
+				setShowHeader(!entry.isIntersecting); // Download 영역이 사라지면 헤더 표시
 			},
 			{
 				root: null,
 				threshold: 0,
-				rootMargin: '-80px 0px 0px 0px'
 			}
 		);
 	
-		if (mainRef.current) {
-			observer.observe(mainRef.current);
+		if (downloadRef.current) {
+			observer.observe(downloadRef.current);
 		}
 	
 		return () => {
-			if (mainRef.current) {
-				observer.unobserve(mainRef.current);
+			if (downloadRef.current) {
+				observer.unobserve(downloadRef.current);
 			}
 		};
-	}, []);
+	}, []);	
 	
 	useEffect(() => {
 		if (textRef.current) {
@@ -63,7 +62,7 @@ function Main() {
 			</S.HeaderWrapper>
 
 			{/* 메인 */}
-			<S.MainContainer ref={mainRef}>
+			<S.MainContainer>
 				<S.MainDecoration src={decoFirst} order={1} />
 				<S.MainDecoration src={decoSecond} order={2} />
 				<S.MainDecoration src={decoThird} order={3} />
@@ -88,7 +87,7 @@ function Main() {
 				</S.MainText>
 				<S.MainLogo src={mainLogo} width={textWidth} />
 
-				<S.DownloadContainer>
+				<S.DownloadContainer ref={downloadRef}>
 					<S.DownloadButton href={APP_STORE_LINK} target="_blank" rel="noopener noreferrer">
 						<S.DownloadLogo src={appleIcon} alt="App Store" />
 						App Store
