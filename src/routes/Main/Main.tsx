@@ -59,6 +59,17 @@ function Main() {
 			<S.HeaderWrapper showHeader={showHeader}>
 				<S.HeaderContainer>
 					<S.HeaderLogo src={dmuHeaderLogo} alt="Logo" />
+					<S.HeaderButtonContainer>
+						<S.HeaderDownloadButton href={APP_STORE_LINK} target="_blank" rel="noopener noreferrer">
+							<S.HeaderDownloadLogo src={appleIcon} alt="App Store" />
+							App Store
+						</S.HeaderDownloadButton>
+
+						<S.HeaderDownloadButton href={GOOGLE_PLAY_LINK} target="_blank" rel="noopener noreferrer">
+							<S.HeaderDownloadLogo src={googlePlayIcon} alt="Google Play" />
+							Google Play
+						</S.HeaderDownloadButton>
+					</S.HeaderButtonContainer>
 				</S.HeaderContainer>
 			</S.HeaderWrapper>
 

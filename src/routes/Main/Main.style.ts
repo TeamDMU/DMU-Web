@@ -12,26 +12,6 @@ export const TextSpan = styled.span`
 	color: ${theme.COLOR.Yellow};
 `;
 
-export const MainContainer = styled.section`
-	background: linear-gradient(to bottom, #95a7ee 0%, #4967e2 31%, #354dae 100%);
-	height: fit-content;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-start;
-	color: white;
-	padding: 3rem;
-	padding-bottom: 10%;
-
-	@media (max-width: 768px) {
-		padding-bottom: 15%;
-	}
-
-	@media (max-width: 480px) {
-		padding-bottom: 30%;
-	}
-`;
-
 export const HeaderWrapper = styled.div<{ showHeader: boolean }>`
 	position: fixed;
 	top: 0;
@@ -51,6 +31,12 @@ export const HeaderContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	
+	@media (max-width: 480px) {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 1rem;
+  	}
 `;
 
 export const HeaderLogo = styled.img`
@@ -65,6 +51,72 @@ export const HeaderLogo = styled.img`
 	@media (max-width: 480px) {
 		width: 8rem;
 		margin-left: 1.5rem;
+	}
+`;
+
+export const HeaderButtonContainer = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 1rem;
+	margin-right: 5rem;
+
+	@media (max-width: 768px) {
+		margin-right: 3rem;
+		align-self: center;
+	}
+
+	@media (max-width: 480px) {
+		margin-right: 2rem;
+		flex-wrap: wrap;
+		justify-content: center;
+  	}
+`;
+
+export const HeaderDownloadButton = styled.a`
+	display: flex;
+	align-items: center;
+	padding: 0.6rem 1rem;
+	font-size: 1rem;
+	font-weight: 600;
+	text-align: center;
+	border-radius: 8px;
+	color: ${theme.COLOR.Blue400};
+	border: 2px solid ${theme.COLOR.Blue400};
+
+	&:hover {
+		background: ${theme.COLOR.Blue400};
+		color: white;
+	}
+`;
+
+export const HeaderDownloadLogo = styled.img`
+	width: 1.2rem;
+	height: 1.2rem;
+	margin-right: 0.5rem;
+
+	${HeaderDownloadButton}:hover & {
+		filter: brightness(0) invert(1);
+	}
+`;
+
+export const MainContainer = styled.section`
+	background: linear-gradient(to bottom, #95a7ee 0%, #4967e2 31%, #354dae 100%);
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	color: white;
+	padding: 3rem;
+	padding-bottom: 10%;
+
+	@media (max-width: 768px) {
+		padding-bottom: 15%;
+	}
+
+	@media (max-width: 480px) {
+		padding-bottom: 30%;
 	}
 `;
 
@@ -213,6 +265,7 @@ export const DownloadButton = styled.a`
 	border: 2px solid transparent;
 	cursor: pointer;
 	gap: 0.5rem;
+	text-align: center;
 
 	&:hover {
 		color: white;
