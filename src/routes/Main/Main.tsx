@@ -164,7 +164,7 @@ function Main() {
 					</a>
 				</S.LinkContainer>
 
-				<S.InfoContainer>.
+				<S.InfoContainer>
 					<S.Logo src={dmuFooterLogo} alt="DMforU Logo" />
 					<S.LinkText href={PRIVACY_LINK} target="_blank" rel="noopener noreferrer">개인정보처리방침</S.LinkText>
 					<S.LinkText href={INQUIRY_LINK} target="_blank" rel="noopener noreferrer">문의하기</S.LinkText>
